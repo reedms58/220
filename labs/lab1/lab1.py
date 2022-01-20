@@ -1,5 +1,11 @@
 """
+Name: Maddie Reed
+monthly_interest.py
 
+Problem: This program calculates the monthly interest charged on a credit card.
+
+Certification of Authenticity:
+I certify that this assignment is entirely my own work.
 """
 
 def monthly_interest():
