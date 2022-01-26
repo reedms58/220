@@ -1,0 +1,41 @@
+Looping- for loop “definite loop”
+for variable in sequence:
+(body)
+Sequence needs to be a list [1,2,3]
+
+For element in [1,2,3]
+Print(element)
+1
+2
+3
+
+For element in range(10):
+If you want numbers to be listed horizontally, end the print(element command with ,end=” “)
+
+When you have nested loops,
+the code goes through all in the range of the inside first
+
+Data Types
+-"hello, world!" = a string
+- 3 = int/integer -/+ whole
+- 3.0 = float/floating point number, a decimal
+
+/ - floating point division
+// - integer division
+% - remainder or mod (can tell even and odd)
+
+% even/odd (repeating numbers)
+abs(-10) = 10
+ anything in parentheses are called parameters/arguments
+
+ range(start, stop, step)
+ start is included in final
+ stop is not included
+ step is what it counts by
+
+# accumulator pattern
+sum = 0
+for i in range(101):
+    sum = sum + i
+ print(sum)
+

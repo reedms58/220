@@ -1,6 +1,6 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Maddie Reed
+hw2.py
 
 Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
 
@@ -13,11 +13,17 @@ import math
 
 
 def sum_of_threes():
-    pass
+    upper_bound = eval(input("What is the upper bound? "))
+    sum= 0
+    for i in range(3, upper_bound + 1, 3):
+        sum = sum + i
+    print("sum of threes is ", sum)
 
 
 def multiplication_table():
-    pass
+    for i in range(1, 11):
+        for j in range(1, 11):
+            print(i * j, end=" ")
 
 
 def triangle_area():
