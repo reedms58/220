@@ -2,40 +2,55 @@
 Name: Maddie Reed
 hw2.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: This program calculates the sum of threes, the area of a triangle, the sum of
+squares, exponents, and makes a multiplication table.
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
 import math
 
 
 def sum_of_threes():
     upper_bound = eval(input("What is the upper bound? "))
-    sum= 0
+    total = 0
     for i in range(3, upper_bound + 1, 3):
-        sum = sum + i
-    print("sum of threes is ", sum)
+        total = total + i
+    print("sum of threes is ", total)
 
 
 def multiplication_table():
     for i in range(1, 11):
+        print('\n')
         for j in range(1, 11):
-            print(i * j, end=" ")
+            print(i * j, end='\t')
 
 
 def triangle_area():
-    pass
+    side_a = eval(input("Enter side a length: "))
+    side_b = eval(input("Enter side b length: "))
+    side_c = eval(input("Enter side c length: "))
+    semi_p = (side_a + side_b + side_c) / 2
+    area = math.sqrt((semi_p*(semi_p-side_a)*(semi_p-side_b)*(semi_p-side_c)))
+    print("Area is ", area)
 
 
 def sum_squares():
-    pass
+    lower_range = eval(input("Enter lower range: "))
+    upper_range = eval(input("Enter upper range: "))
+    total = 0
+    for i in range(lower_range, upper_range + 1):
+        total = (i * i) + total
+    print(total)
 
 
 def power():
-    pass
+    base = eval(input("Enter the base: "))
+    exponent = eval(input("Enter the exponent: "))
+    answer = 1
+    for i in range(exponent):
+        answer = base * answer
+    print(base, "^", exponent, "=", answer)
 
 
 if __name__ == '__main__':
