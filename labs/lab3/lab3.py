@@ -27,5 +27,3 @@ def traffic():
     average_cars_on_all_roads = cars_on_all_roads / number_of_roads_surveyed
     print("Total number of vehicles traveled on all roads: ", cars_on_all_roads)
     print("Average number of vehicles per road: ", round(average_cars_on_all_roads, 2))
-
-traffic()
