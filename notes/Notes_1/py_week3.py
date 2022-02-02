@@ -13,3 +13,13 @@ for i in range(100):
     print(i%4)
 
 import math
+
+a, b, c = eval(input("enter a, b, and c: "))
+root_1 = (-b + math.sqrt(b * b - 4 * a * c)) / (2 * a)
+root_2 = (-b - math.sqrt(b * b - 4 * a * c)) / (2 * a)
+print("root 1: ", root_1, "root 2: ", root_2)
+
+age = 3.5
+int(age)
+
+round(3.758694, 2)

@@ -15,10 +15,16 @@ If you want numbers to be listed horizontally, end the print(element command wit
 When you have nested loops,
 the code goes through all in the range of the inside first
 
-Data Types
+primitive data types (building blocks for all data in the computer)
 -"hello, world!" = a string
 - 3 = int/integer -/+ whole
 - 3.0 = float/floating point number, a decimal
+
+classes consist of data and functions.
+a way for us to group data together
+new data types
+-range
+-class
 
 / - floating point division
 // - integer division
@@ -39,3 +45,7 @@ for i in range(101):
     sum = sum + i
  print(sum)
 
+The int() function takes floats and turns them into integers
+
+round(float, number of decimal places to round to)
+round returns floats
