@@ -1,13 +1,12 @@
 """
 Name: <Maddie Reed>
-hw3.py
+<hw3.py>
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: <This program calculates average grades, adds up tips, approximates square roots,
+gives a certain number of terms in a sequence, and estimates pi.
 
 Certification of Authenticity:
-<include one of the following>
-I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
+I certify that this assignment is my own work, but I discussed it with: Alex Groves
 """
 
 
@@ -30,15 +29,31 @@ def tip_jar():
 
 
 def newton():
-    pass
+    number = eval(input("What number do you want to square root? "))
+    times_approximated = eval(input("How many times should we improve the approximation? "))
+    approx = 1
+    for i in range(times_approximated):
+        approx = (number / approx + approx) / 2
+    print("the square root is approximately", approx)
 
 
 def sequence():
-    pass
+    terms = eval(input("how many terms would you like? "))
+    for i in range(1, terms + 1, 2):
+        print(i)
+        print(i)
 
 
 def pi():
-    pass
+    terms = eval(input("How many terms in the series? "))
+    estimation = 1
+    for i in range(1, terms):
+        numerator = 2 * i
+        print(numerator)
+        denominator = 2 * i - 1
+        print(denominator)
+        estimation = estimation * (numerator * numerator) / (denominator * (denominator + 2))
+    print(estimation * 2)
 
 
 if __name__ == '__main__':
