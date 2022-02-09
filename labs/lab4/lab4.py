@@ -54,5 +54,3 @@ def greeting_card():
 
     win.getMouse()
 
-
-greeting_card()
