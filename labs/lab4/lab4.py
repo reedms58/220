@@ -53,7 +53,6 @@ def greeting_card():
     close.draw(win)
 
     win.getMouse()
-    win.close()
 
 
 greeting_card()
