@@ -22,7 +22,7 @@ middle.draw(win)
 input('hit enter to close')
 
 # when importing classes you can also say: you no longer have to say <class.func>
-from graphics import Point, GraphWin, Circle
+from graphics import Point, GraphWin, Circle, Text
 
 my_circle = Circle(middle, 40)
 my_circle.draw(win)
@@ -39,6 +39,7 @@ right_eye = Circle(Point(380, 60), 15)
 
 left_eye.setFill('yellow')
 left_eye.setOutline('green')
+left_eye.setWidth(10)
 right_eye.setFill('yellow')
 right_eye.setOutline('green')
 
@@ -50,4 +51,15 @@ for i in range(100):
     click_point = win.getMouse()  # this waits for a click on the screen
     print(click_point.getX(), click_point.getY())
     click_point.draw(win)
+win.getMouse()
+text_point = Point(350, 600)
+label = Text((text_point, "bob"))  # point is the center of the text
+label.draw(win)
+
+user_input = Entry(Point(5, 5), 50)
+user_input.setText("Enter you name here")
+user_input.draw(win)
+win.getMouse()
+name = user_input.getText()
+label.setText(name)
 win.getMouse()

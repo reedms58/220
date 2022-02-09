@@ -39,10 +39,12 @@ def newton():
 
 def sequence():
     terms = eval(input("how many terms would you like? "))
-    for i in range(1, terms + 1, 2):
-        print(i)
-        print(i)
+    for i in range(1, terms + 1):
+        sort_terms = i % 2
+        sort_terms = sort_terms * 2
+        print(sort_terms)
 
+sequence()
 
 def pi():
     terms = eval(input("How many terms in the series? "))
