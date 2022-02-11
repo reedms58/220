@@ -2,16 +2,16 @@
 Name: <Maddie Reed>
 hw4.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: This program draws squares, calculates the perimeter and area of a rectangle,
+calculates the radius of a circle, and approximates pi.
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
 
 from graphics import *
 import math
+
 
 def squares():
     # Creates a graphical window
@@ -73,8 +73,8 @@ def rectangle():
     calc_perimeter = abs(side_1 * 2) + abs(side_2 * 2)
     calc_area = abs(side_1 * side_2)
 
-    peri_string = "Perimeter: ", str(calc_perimeter)
-    area_string = "Area: ", str(calc_area)
+    peri_string = "Perimeter: " + str(calc_perimeter)
+    area_string = "Area: " + str(calc_area)
     perimeter = Text(Point(200, 350), peri_string)
     area = Text(Point(200, 370), area_string)
     perimeter.draw(win)
@@ -84,6 +84,7 @@ def rectangle():
     close.draw(win)
 
     win.getMouse()
+    win.close()
 
 
 def circle():
@@ -100,12 +101,12 @@ def circle():
     point_1 = Point(click_1.getX(), click_1.getY())
     circum_1 = click_2.getX() - click_1.getX()
     circum_2 = click_2.getY() - click_1.getY()
-    distance = (circum_1 ** 2 + circum_2 ** 2) ** (1/2)
+    distance = (circum_1 ** 2 + circum_2 ** 2) ** (1 / 2)
     circ = Circle(point_1, distance)
     circ.setFill('light blue')
     circ.draw(win)
 
-    radius_string = "Radius: ", distance
+    radius_string = "Radius: " + str(distance)
     radius = Text(Point(200, 370), radius_string)
     radius.draw(win)
 
@@ -113,18 +114,21 @@ def circle():
     close.draw(win)
 
     win.getMouse()
+    win.close()
 
 
 def pi2():
     terms = eval(input("enter the number of terms to sum: "))
     accumulator = 0
-    for i in range(1, terms + 1, 2):
-        accumulator = accumulator + 4/i - 4/(i+2)
+    denominator = 1
+    numerator = 4
+    for i in range(1, terms + 1):
+        accumulator = accumulator + (numerator / denominator)
+        numerator = numerator * -1
+        denominator = denominator + 2
     print("pi approximation: ", accumulator)
     accuracy = abs(math.pi - accumulator)
     print("accuracy: ", accuracy)
-
-pi2()
 
 
 if __name__ == '__main__':
