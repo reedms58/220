@@ -47,5 +47,6 @@ def weighted_average(in_file_name, out_file_name):
             print(name + ":", "Error: The weights are more than 100.", file=out_file)
     class_average = class_total / student_total
     print("Class average: ", class_average, file=out_file)
+
     in_file.close()
     out_file.close()
