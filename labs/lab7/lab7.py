@@ -2,12 +2,11 @@
 Name: Maddie Reed
 lab7.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: This program calculates the weighted grade average of a class
+as well as the class average.
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
 
 
