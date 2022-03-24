@@ -9,7 +9,7 @@ processes strings and lists, evaluates a series and makes a target.
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
 """
-from graphics import *
+from hw8.graphics import *
 
 
 def triangle():

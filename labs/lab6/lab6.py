@@ -7,7 +7,7 @@ Problem: This program uses the vigenere cipher to encode a message.
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
 """
-from graphics import *
+from hw8.graphics import *
 
 
 def vigenere_cipher():

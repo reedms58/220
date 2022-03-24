@@ -40,22 +40,18 @@ def newton():
 def sequence():
     terms = eval(input("how many terms would you like? "))
     for i in range(1, terms + 1):
-        sort_terms = i % 2
-        sort_terms = sort_terms * 2
-        print(sort_terms)
+        print((i-1) + (i % 2), end=" ")
 
-sequence()
 
 def pi():
     terms = eval(input("How many terms in the series? "))
-    estimation = 1
-    for i in range(1, terms):
-        numerator = 2 * i
-        print(numerator)
-        denominator = 2 * i - 1
-        print(denominator)
-        estimation = estimation * (numerator * numerator) / (denominator * (denominator + 2))
-    print(estimation * 2)
+    total = 1
+    for i in range(terms):
+        numerator = i + (2.0 - (i % 2.0))
+        denominator = i + (1.0 + (i % 2.0))
+        total *= numerator/denominator
+    answer = total * 2
+    print(answer)
 
 
 if __name__ == '__main__':

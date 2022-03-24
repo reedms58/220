@@ -8,7 +8,7 @@ Certification of Authenticity:
 I certify that this assignment is entirely my own work.
 """
 
-from graphics import *
+from hw8.graphics import *
 
 
 def greeting_card():
@@ -54,3 +54,5 @@ def greeting_card():
 
     win.getMouse()
 
+
+greeting_card()

@@ -1,15 +1,16 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Maddie Reed
+lab9.py
 """
 
 
 def build_board():
-    pass
+    board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    return board
 
 
 def print_board(board):
-    """ prints the values of baord """
+    """ prints the values of board """
     RED = "\033[1;31m"
     BLUE = "\033[1;36m"
     LIGHT_GRAY = "\033[0;37m"
@@ -37,31 +38,84 @@ def print_board(board):
 
 
 def is_legal(board, position):
-    pass
+    str_boar_pos = str(board[position-1])
+    if str_boar_pos.isnumeric():
+        return True
+    else:
+        return False
 
 
 def fill_spot(board, position, character):
-    pass
+    shape = character.strip().lower()
+    new_board = str(board[position-1]).replace(str(position), shape)
+    return new_board
 
 
 def winning_game(board):
-    pass
+    for index in range(0, 9, 3):
+        if board[index] == board[index+1] == board[index+2]:
+            return True
+    for index in range(0, 3):
+        if board[index] == board[index+3] == board[index+6]:
+            return True
+    if board[0] == board[4] == board[8]:
+        return True
+    if board[2] == board[4] == board[6]:
+        return True
+    else:
+        return False
 
 
 def game_over(board):
-    pass
+    if winning_game(board):
+        return True
+    else:
+        for position in range(0, 9):
+            if not is_legal(board, position):
+                print("No moves left: tie")
+                return True
+            else:
+                return False
 
 
 def get_winner(board):
-    pass
+    if not game_over(board):
+        return None
+    board_str = " "
+    for position in (0, 8):
+        board_str = board_str + str(board[position])
+    x_num = board_str.count('x')
+    o_num = board_str.count('o')
+    if x_num > o_num:
+        return 'x wins'
+    if x_num == o_num:
+        return 'o wins'
 
 
 def play(board):
-    pass
+    while not game_over(board):
+        for counter in range(0, 1):
+            shapes = ['x', 'o']
+            turn = shapes[counter % 2]
+            prompt = turn + "'s, choose a position"
+            position = eval(input(prompt))
+            if is_legal(board, position):
+                fill_spot(board, position, turn)
+                print_board(board)
+            else:
+                print("you can't put that there!")
 
 
 def main():
-    pass
+    print("Enter a position from the board to place an x or o. "
+          "3 of the same in a row wins the game.")
+    board = build_board()
+    print_board(board)
+    ans = 'y'
+    while ans[0]:
+        play(board)
+        get_winner(board)
+        ans = input("Play again?")
 
 
 if __name__ == '__main__':
