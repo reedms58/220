@@ -2,7 +2,7 @@
 Name: Maddie Reed
 lab13.py
 
-Problem:
+Problem: This program alerts a user of spikes in the amounts of trades per second.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
